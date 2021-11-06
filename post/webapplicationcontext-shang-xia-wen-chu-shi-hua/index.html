@@ -2,9 +2,9 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>WebApplicationContext上下文初始化 | Gridea</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://wapkch.github.io/favicon.ico?v=1636123552213">
+<link rel="shortcut icon" href="https://wapkch.github.io/favicon.ico?v=1636186992056">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wapkch.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://wapkch.github.io">
-  <img class="avatar" src="https://wapkch.github.io/images/avatar.png?v=1636123552213" alt="">
+  <img class="avatar" src="https://wapkch.github.io/images/avatar.png?v=1636186992056" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -73,25 +73,56 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              WebApplicationContext上下文初始化
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-11-06
               </span>
               <span>
                 1 min read
               </span>
               
+                <a href="https://wapkch.github.io/tag/8a1EczY7e" class="post-tag">
+                  # Spring MVC
+                </a>
+              
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>这是关于的页面，可以在这里向世界介绍你！</p>
+                <h1 id="contextloaderlistener">ContextLoaderListener</h1>
+<p><img src="https://wapkch.github.io/post-images/1636169004316.png" alt=""></p>
+<pre><code class="language-java">/**
+ * Bootstrap listener to start up and shut down Spring's root {@link WebApplicationContext}.
+ */
+public class ContextLoaderListener extends ContextLoader implements ServletContextListener {
+
+	/**
+	 * Initialize the root web application context.
+	 */
+	@Override
+	public void contextInitialized(ServletContextEvent event) {
+		initWebApplicationContext(event.getServletContext());
+	}
+	
+}
+</code></pre>
+<p><img src="https://wapkch.github.io/post-images/1636186246533.png" alt=""></p>
+<h1 id="dispatcherservlet">DispatcherServlet</h1>
+<p><img src="https://wapkch.github.io/post-images/1636186468959.png" alt=""><br>
+<img src="https://wapkch.github.io/post-images/1636186868126.png" alt=""><br>
+<img src="https://wapkch.github.io/post-images/1636186894214.png" alt=""><br>
+<img src="https://wapkch.github.io/post-images/1636186939996.png" alt=""><br>
+<img src="https://wapkch.github.io/post-images/1636186979731.png" alt=""></p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li><a href="#contextloaderlistener">ContextLoaderListener</a></li>
+<li><a href="#dispatcherservlet">DispatcherServlet</a></li>
+</ul>
+
               </div>
             </div>
           </article>
