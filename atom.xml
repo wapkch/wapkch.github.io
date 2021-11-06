@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wapkch.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-11-06T09:04:01.040Z</updated>
+    <title>Wapkch Blogs</title>
+    <updated>2021-11-06T09:15:23.428Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wapkch.github.io"/>
     <link rel="self" href="https://wapkch.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://wapkch.github.io/images/avatar.png</logo>
     <icon>https://wapkch.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, Wapkch Blogs</rights>
     <entry>
         <title type="html"><![CDATA[WebApplicationContext上下文初始化]]></title>
         <id>https://wapkch.github.io/post/webapplicationcontext-shang-xia-wen-chu-shi-hua</id>
