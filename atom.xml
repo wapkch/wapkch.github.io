@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wapkch.github.io</id>
     <title>Wapkch Blogs</title>
-    <updated>2021-11-06T09:17:09.893Z</updated>
+    <updated>2021-11-12T06:51:56.857Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wapkch.github.io"/>
     <link rel="self" href="https://wapkch.github.io/atom.xml"/>
@@ -10,6 +10,40 @@
     <logo>https://wapkch.github.io/images/avatar.png</logo>
     <icon>https://wapkch.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Wapkch Blogs</rights>
+    <entry>
+        <title type="html"><![CDATA[HandlerMapping组件]]></title>
+        <id>https://wapkch.github.io/post/handlermapping-zu-jian</id>
+        <link href="https://wapkch.github.io/post/handlermapping-zu-jian">
+        </link>
+        <updated>2021-11-11T03:52:15.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="继承体系">继承体系</h1>
+<p><img src="https://wapkch.github.io/post-images/1636627539202.png" alt=""></p>
+<h2 id="abstracthandlermapping">AbstractHandlerMapping</h2>
+<p><img src="https://wapkch.github.io/post-images/1636687005788.png" alt=""></p>
+<h3 id="11-gethandlerinternal">1.1 getHandlerInternal</h3>
+<p>将 request 进行搜索找到对应的 handler 对象，委托给子类AbstractHandlerMethodMapping实现</p>
+<h3 id="12-gethandlerexecutionchain">1.2 getHandlerExecutionChain</h3>
+<p>获取 HandlerExecutionChain 对象，将<code>HandlerInterceptor</code>注入<br>
+<img src="https://wapkch.github.io/post-images/1636687480823.png" alt=""></p>
+<h3 id="13-hascorsconfigurationsource">1.3 hasCorsConfigurationSource</h3>
+<p>主要做跨域支持，将<code>CorsConfiguration</code>注入<code>HandlerExecutionChain</code><br>
+<img src="https://wapkch.github.io/post-images/1636688265771.png" alt=""><br>
+<img src="https://wapkch.github.io/post-images/1636699702226.png" alt=""></p>
+<h2 id="handlerinterceptor初始化">HandlerInterceptor初始化</h2>
+<p><img src="https://wapkch.github.io/post-images/1636689655405.png" alt=""></p>
+<ol>
+<li>EnableWebMvcConfiguration<br>
+<img src="https://wapkch.github.io/post-images/1636689887135.png" alt=""></li>
+<li>WebMvcConfigurationSupport#getInterceptors<br>
+<img src="https://wapkch.github.io/post-images/1636689476684.png" alt=""></li>
+<li>WebMvcConfigurationSupport#addInterceptors<br>
+<img src="https://wapkch.github.io/post-images/1636689504074.png" alt=""></li>
+<li>DelegatingWebMvcConfiguration#addInterceptors</li>
+<li>AbstractHandlerMapping#initApplicationContext<br>
+<img src="https://wapkch.github.io/post-images/1636689725211.png" alt=""></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[WebApplicationContext上下文初始化]]></title>
         <id>https://wapkch.github.io/post/webapplicationcontext-shang-xia-wen-chu-shi-hua</id>
