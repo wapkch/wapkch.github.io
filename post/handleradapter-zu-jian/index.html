@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    HandlerMapping组件 | Wapkch Blogs
+    HandlerAdapter组件 | Wapkch Blogs
 </title>
 <link rel="shortcut icon" href="https://wapkch.github.io/favicon.ico?v=1636702485131">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -99,45 +99,19 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            HandlerMapping组件
+                            HandlerAdapter组件
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2021-11-11</time>
+                            <time class="post-time">2021-11-12</time>
                             
-                                <a href="https://wapkch.github.io/tag/ZKQLh9vkL" class="post-tag i-tag
-                            i-tag-banana">
-                            #Spring MVC
-                        </a>
-                                
                         </div>
                         
                                 <div class="post-content">
-                                    <h2 id="继承体系">继承体系</h2>
-<p><img src="https://wapkch.github.io/post-images/1636627539202.png" alt=""></p>
-<h2 id="abstracthandlermapping">AbstractHandlerMapping</h2>
-<p><img src="https://wapkch.github.io/post-images/1636687005788.png" alt=""></p>
-<h3 id="11-gethandlerinternal">1.1 getHandlerInternal</h3>
-<p>将 request 进行搜索找到对应的 handler 对象，委托给子类AbstractHandlerMethodMapping实现</p>
-<h3 id="12-gethandlerexecutionchain">1.2 getHandlerExecutionChain</h3>
-<p>获取 HandlerExecutionChain 对象，将<code>HandlerInterceptor</code>注入<br>
-<img src="https://wapkch.github.io/post-images/1636687480823.png" alt=""></p>
-<h3 id="13-hascorsconfigurationsource">1.3 hasCorsConfigurationSource</h3>
-<p>主要做跨域支持，将<code>CorsConfiguration</code>注入<code>HandlerExecutionChain</code><br>
-<img src="https://wapkch.github.io/post-images/1636688265771.png" alt=""><br>
-<img src="https://wapkch.github.io/post-images/1636699702226.png" alt=""></p>
-<h2 id="handlerinterceptor初始化">HandlerInterceptor初始化</h2>
-<p><img src="https://wapkch.github.io/post-images/1636689655405.png" alt=""></p>
-<ol>
-<li>EnableWebMvcConfiguration<br>
-<img src="https://wapkch.github.io/post-images/1636689887135.png" alt=""></li>
-<li>WebMvcConfigurationSupport#getInterceptors<br>
-<img src="https://wapkch.github.io/post-images/1636689476684.png" alt=""></li>
-<li>WebMvcConfigurationSupport#addInterceptors<br>
-<img src="https://wapkch.github.io/post-images/1636689504074.png" alt=""></li>
-<li>DelegatingWebMvcConfiguration#addInterceptors</li>
-<li>AbstractHandlerMapping#initApplicationContext<br>
-<img src="https://wapkch.github.io/post-images/1636689725211.png" alt=""></li>
-</ol>
+                                    <h1 id="继承体系">继承体系</h1>
+<p><img src="https://wapkch.github.io/post-images/1636702269761.png" alt=""></p>
+<h2 id="simplecontrollerhandleradapter">SimpleControllerHandlerAdapter</h2>
+<p>适用于实现<code>Controller</code>接口的handler<br>
+<img src="https://wapkch.github.io/post-images/1636702478351.png" alt=""></p>
 
                                 </div>
                     </article>
@@ -145,9 +119,9 @@
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://wapkch.github.io/post/webapplicationcontext-shang-xia-wen-chu-shi-hua">
+                            <a href="https://wapkch.github.io/post/handlermapping-zu-jian">
                                 <h3 class="post-title">
-                                    WebApplicationContext上下文初始化
+                                    HandlerMapping组件
                                 </h3>
                             </a>
                         </div>
@@ -166,17 +140,9 @@
         <div class="toc-title i-card-title">目录</div>
         <div class="toc-content">
             <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB">继承体系</a>
 <ul>
-<li><a href="#%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB">继承体系</a></li>
-<li><a href="#abstracthandlermapping">AbstractHandlerMapping</a>
-<ul>
-<li><a href="#11-gethandlerinternal">1.1 getHandlerInternal</a></li>
-<li><a href="#12-gethandlerexecutionchain">1.2 getHandlerExecutionChain</a></li>
-<li><a href="#13-hascorsconfigurationsource">1.3 hasCorsConfigurationSource</a></li>
-</ul>
-</li>
-<li><a href="#handlerinterceptor%E5%88%9D%E5%A7%8B%E5%8C%96">HandlerInterceptor初始化</a></li>
+<li><a href="#simplecontrollerhandleradapter">SimpleControllerHandlerAdapter</a></li>
 </ul>
 </li>
 </ul>

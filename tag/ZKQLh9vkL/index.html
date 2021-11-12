@@ -7,7 +7,7 @@
 <title>
     Spring MVC | Wapkch Blogs
 </title>
-<link rel="shortcut icon" href="https://wapkch.github.io/favicon.ico?v=1636699715826">
+<link rel="shortcut icon" href="https://wapkch.github.io/favicon.ico?v=1636702485131">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -27,7 +27,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://wapkch.github.io">
-                <img class="avatar" src="https://wapkch.github.io/images/avatar.png?v=1636699715826" alt="">
+                <img class="avatar" src="https://wapkch.github.io/images/avatar.png?v=1636702485131" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -104,6 +104,60 @@
         
             <article class="post i-card">
                 <h2 class="post-title">
+                    <a href="https://wapkch.github.io/post/handlermapping-zu-jian">
+                        HandlerMapping组件
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2021-11-11</time>
+                    
+                        <a href="https://wapkch.github.io/tag/ZKQLh9vkL" class="post-tag i-tag
+                            i-tag-other_4">
+            #Spring MVC
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            继承体系
+
+AbstractHandlerMapping
+
+1.1 getHandlerInternal
+将 request 进行搜索找到对应的 handler 对象，委托给子类AbstractHandlerMethodMapping实现
+1.2 getHandlerExecutionChain
+获取 HandlerExecutionChain 对象，将HandlerInterceptor注入
+
+1.3 hasCorsConfigurationSource
+主要做跨域支持，将CorsConfiguration注入HandlerExecutionChain
+
+
+HandlerInterceptor初始化
+
+
+EnableWebMvcConfiguration
+
+WebMvcConfigurationSupport#getInterceptors
+
+WebMvcConfigurationSupport#addInterceptors
+
+DelegatingWebMvcConfiguration#addInterceptors
+AbstractHandlerMapping#initApplicationContext
+
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://wapkch.github.io/post/handlermapping-zu-jian">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
                     <a href="https://wapkch.github.io/post/webapplicationcontext-shang-xia-wen-chu-shi-hua">
                         WebApplicationContext上下文初始化
                     </a>
@@ -112,7 +166,7 @@
                     <time class="post-time">2021-11-06</time>
                     
                         <a href="https://wapkch.github.io/tag/ZKQLh9vkL" class="post-tag i-tag
-                            i-tag-other_4">
+                            i-tag-other_3">
             #Spring MVC
         </a>
                         
@@ -165,7 +219,7 @@ DispatcherServlet
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wapkch.github.io/images/avatar.png?v=1636699715826)">
+        <div class="id_card-avatar" style="background-image: url(https://wapkch.github.io/images/avatar.png?v=1636702485131)">
         </div>
         <h1 class="id_card-title">
             Wapkch Blogs
